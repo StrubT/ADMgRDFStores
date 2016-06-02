@@ -10,9 +10,10 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
 
-SELECT ?person
+SELECT ?name ?birthDate
 WHERE {
-	?person dbo:birthPlace dbr:Bern ;
+	[] dbo:birthPlace dbr:Bern ;
+		dbp:name ?name ;
 		dbo:birthDate ?birthDate .
 	FILTER(?birthDate < '2000-01-01'^^xsd:dateTime)
 }

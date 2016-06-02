@@ -10,9 +10,10 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
 
-SELECT ?person
+SELECT ?name
 WHERE {
-	?person dbo:birthPlace dbr:Bern ;
-		dbo:deathPlace dbr:Bern .
+	[] dbo:birthPlace dbr:Bern ;
+		dbo:deathPlace dbr:Bern ;
+		dbp:name ?name .
 }
 #OFFSET 10 LIMIT 10
