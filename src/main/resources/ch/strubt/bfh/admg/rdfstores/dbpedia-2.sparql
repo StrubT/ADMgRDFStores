@@ -10,13 +10,10 @@ PREFIX dbr: <http://dbpedia.org/resource/>
 PREFIX dbo: <http://dbpedia.org/ontology/>
 PREFIX dbp: <http://dbpedia.org/property/>
 
-PREFIX dbi: <http://dbpedia.org/ontology/infrastructure/>
-
 SELECT ?formerName ?buildingStartDate ?lengthKM ?lengthM ?postalCode
 WHERE {
 	dbr:Junkerngasse dbo:formerName ?formerName ;
 		dbo:buildingStartDate ?buildingStartDate ;
-		dbi:length ?lengthKM ;
 		dbp:lengthM ?lengthM ;
 		dbo:postalCode ?postalCode .
 }
