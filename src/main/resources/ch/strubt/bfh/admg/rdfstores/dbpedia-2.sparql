@@ -17,6 +17,6 @@ WHERE {
 	dbr:Junkerngasse dbo:formerName ?formerName ;
 		dbo:buildingStartDate ?buildingStartDate ;
 		dbi:length ?lengthKM ;
-		dbp:lengthM ?lengthKM ;
+		dbp:lengthM ?lengthM ;
 		dbo:postalCode ?postalCode .
 }
