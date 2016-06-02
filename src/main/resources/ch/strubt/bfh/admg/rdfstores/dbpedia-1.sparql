@@ -1,0 +1,19 @@
+#http://dbpedia.org/sparql?nsdecl
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?person
+WHERE {
+	?person dbo:birthPlace dbr:Bern ;
+		dbo:birthDate ?birthDate .
+	FILTER(?birthDate < '2000-01-01'^^xsd:dateTime)
+}
+#OFFSET 10 LIMIT 10
