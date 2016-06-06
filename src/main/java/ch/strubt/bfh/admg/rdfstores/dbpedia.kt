@@ -22,5 +22,6 @@ object Resources {
 
 	val queries = listOf(Resources::class.java.getResourceAsStream("dbpedia-1.sparql").reader().readText(),
 											 Resources::class.java.getResourceAsStream("dbpedia-2.sparql").reader().readText(),
-											 Resources::class.java.getResourceAsStream("dbpedia-3.sparql").reader().readText())
+											 Resources::class.java.getResourceAsStream("dbpedia-3.sparql").reader().readText(),
+											 Resources::class.java.getResourceAsStream("dbpedia-4.sparql").reader().readText())
 }
